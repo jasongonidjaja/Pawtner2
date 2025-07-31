@@ -21,7 +21,7 @@
             android:id="@+id/btnClose"
             android:layout_width="16dp"
             android:layout_height="16dp"
-            android:src="@drawable/ic_close"
+            android:src="@drawable/ic_close2"
             app:tint="@color/darkblue_paw"
             android:contentDescription="Close"
             app:layout_constraintStart_toStartOf="parent"

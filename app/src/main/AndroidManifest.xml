@@ -41,6 +41,7 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
 
 
+
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"
