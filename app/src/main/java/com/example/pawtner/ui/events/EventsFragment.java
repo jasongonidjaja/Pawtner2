@@ -7,9 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
 
-import com.example.pawtner.R;
 import com.example.pawtner.databinding.FragmentEventsBinding;
 
 public class EventsFragment extends Fragment {
@@ -20,16 +18,8 @@ public class EventsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentEventsBinding.inflate(inflater, container, false);
-
-        setupCardClickListener();
-
+        binding.textEvents.setText("Ini halaman Events");
         return binding.getRoot();
-    }
-
-    private void setupCardClickListener() {
-        binding.eventCard.setOnClickListener(view -> {
-            Navigation.findNavController(view).navigate(R.id.eventDetailFragment);
-        });
     }
 
     @Override

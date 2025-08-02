@@ -52,6 +52,7 @@ public class RegisterActivity extends AppCompatActivity {
         EditText phoneInput = findViewById(R.id.phoneInput);
         RadioGroup genderGroup = findViewById(R.id.genderGroup);
         EditText addressInput = findViewById(R.id.addressInput);
+        EditText nikInput = findViewById(R.id.nikInput);
         TextView errorMessage = findViewById(R.id.errorMessage);
 
         signUpButton.setOnClickListener(v -> {
@@ -61,10 +62,11 @@ public class RegisterActivity extends AppCompatActivity {
             String phone = phoneInput.getText().toString().trim();
             int selectedGenderId = genderGroup.getCheckedRadioButtonId();
             String address = addressInput.getText().toString().trim();
+            String nik = nikInput.getText().toString().trim();
 
             if (fullName.isEmpty() || email.isEmpty() || password.isEmpty()
                     || phone.isEmpty() || selectedGenderId == -1
-                    || address.isEmpty()) {
+                    || address.isEmpty() || nik.isEmpty()) {
                 errorMessage.setText("Please complete all fields.");
                 errorMessage.setVisibility(TextView.VISIBLE);
             } else if (!fullName.matches("[a-zA-Z\\s]+")) {
@@ -75,6 +77,9 @@ public class RegisterActivity extends AppCompatActivity {
                 errorMessage.setVisibility(TextView.VISIBLE);
             } else if (phone.length() < 11 || phone.length() > 12) {
                 errorMessage.setText("Phone must be 11–12 digits.");
+                errorMessage.setVisibility(TextView.VISIBLE);
+            } else if (!nik.matches("\\d{16,}")) {
+                errorMessage.setText("NIK must be at least 16 digits and numeric.");
                 errorMessage.setVisibility(TextView.VISIBLE);
             } else {
                 errorMessage.setVisibility(TextView.GONE);
@@ -89,6 +94,7 @@ public class RegisterActivity extends AppCompatActivity {
                 intent.putExtra("email", email);
                 intent.putExtra("phone", phone);
                 intent.putExtra("address", address);
+                intent.putExtra("nik", nik);
                 intent.putExtra("gender", gender);
                 startActivity(intent);
             }
@@ -99,14 +105,11 @@ public class RegisterActivity extends AppCompatActivity {
         MaterialButton facebookButton = findViewById(R.id.facebookButton);
 
         googleButton.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
+            startActivity(new Intent(this, LoginActivity.class));
         });
 
         facebookButton.setOnClickListener(v -> {
-            startActivity(new Intent(this, MainActivity.class));
-            finish();
+            startActivity(new Intent(this, LoginActivity.class));
         });
-
     }
 }

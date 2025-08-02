@@ -20,6 +20,7 @@
         android:paddingTop="5dp"
         android:paddingBottom="5dp" />
 
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -27,19 +28,19 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="13dp" />
 
-    <!--    <androidx.appcompat.widget.SearchView-->
-    <!--        android:id="@+id/searchView"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:layout_marginHorizontal="0dp"-->
-    <!--        android:background="@drawable/search_background"-->
-    <!--        android:iconifiedByDefault="false"-->
-    <!--        app:queryHint="Search Chat"-->
-    <!--        app:defaultQueryHint="Search Chat"-->
-    <!--        android:textColorHint="#808080"-->
-    <!--        app:searchHintIcon="@null"-->
-    <!--        app:searchIcon="@drawable/ic_search"-->
-    <!--        android:inputType="text" />-->
+<!--    <androidx.appcompat.widget.SearchView-->
+<!--        android:id="@+id/searchView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="0dp"-->
+<!--        android:background="@drawable/search_background"-->
+<!--        android:iconifiedByDefault="false"-->
+<!--        app:queryHint="Search Chat"-->
+<!--        app:defaultQueryHint="Search Chat"-->
+<!--        android:textColorHint="#808080"-->
+<!--        app:searchHintIcon="@null"-->
+<!--        app:searchIcon="@drawable/ic_search"-->
+<!--        android:inputType="text" />-->
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
@@ -51,9 +52,10 @@
         app:queryHint="Search chat" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chat_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginTop="14dp"/>
+    android:id="@+id/chat_recycler_view"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:layout_marginTop="14dp"/>
+
 </LinearLayout>

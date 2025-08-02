@@ -9,18 +9,7 @@
         android:id="@+id/navigation_home"
         android:name="com.example.pawtner.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home">
-
-        <action
-            android:id="@+id/action_home_to_petprofileother"
-            app:destination="@id/navigation_petprofileother"/>
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_petprofileother"
-        android:name="com.example.pawtner.ui.home.PetProfileOtherFragment"
-        android:label="Pet Profile Other"
-        tools:layout="@layout/fragment_pet_profile_other"/>
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_chat"
@@ -124,13 +113,6 @@
         android:name="com.example.pawtner.ui.events.EventsFragment"
         android:label="@string/title_events"
         tools:layout="@layout/fragment_events" />
-
-    <fragment
-        android:id="@+id/eventDetailFragment"
-        android:name="com.example.pawtner.ui.events.EventDetailFragment"
-        android:label="Event Detail"
-        tools:layout="@layout/fragment_event_detail" />
-
 
     <fragment
         android:id="@+id/navigation_notifications"
