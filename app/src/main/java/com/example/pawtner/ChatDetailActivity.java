@@ -400,9 +400,9 @@ public class ChatDetailActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         } else if (id == R.id.action_more) {
-        View anchor = findViewById(R.id.chat_toolbar); // fallback anchor karena menu item tidak memiliki view
-        showReportPopup(anchor);
-        return true;
+            View anchor = findViewById(R.id.chat_toolbar); // fallback anchor karena menu item tidak memiliki view
+            showReportPopup(anchor);
+            return true;
         }
 
 
